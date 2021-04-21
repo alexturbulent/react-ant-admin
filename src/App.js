@@ -1,13 +1,27 @@
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+
+import { checkJWTToken } from "./utils";
+
 import 'antd/dist/antd.css';
 
+
 function App() {
+    const isAuthenticated = checkJWTToken();
+    console.log(checkJWTToken());
+
     return (
-        <div className="App">
-            <header className="App-header">
-                Learn React
-          </header>
-        </div>
+        <Router>
+            <Switch>
+                <Route path='/'>
+                    {
+                        isAuthenticated ? <Dashboard /> : <Login />
+                    }
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
