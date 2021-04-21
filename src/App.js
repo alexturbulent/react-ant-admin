@@ -10,7 +10,6 @@ import 'antd/dist/antd.css';
 
 function App() {
     const isAuthenticated = checkJWTToken();
-    console.log(checkJWTToken());
 
     return (
         <Router>
