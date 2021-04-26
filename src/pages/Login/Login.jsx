@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Form, Input, Button, Checkbox } from 'antd';
 
+import { projectName } from "../../constants";
 import "./login.scss";
 
 const Login = () => {
@@ -20,7 +21,7 @@ const Login = () => {
                 <Row align="middle" justify="center" className="form-row" >
                     <Col xs={23} sm={20} md={20} xl={12}>
                         <div className="heading-box">
-                            <h2>PANDA/TA</h2>
+                            <h2>{projectName}</h2>
                             <p>Welcome back! Please login to your account.</p>
                         </div>
 
