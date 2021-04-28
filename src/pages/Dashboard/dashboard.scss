@@ -23,18 +23,32 @@
       height: 53px !important;
       padding-top: 5px;
 
+      &:hover {
+        color: $primary;
+        background-color: $lightGrey !important;
+      }
+
       &:first-child {
         margin-top: 0;
       }
     }
 
+    .sidebar-icon {
+        color: $iconColor;
+    }
+
     .ant-menu-item-selected {
+      color: $primary;
       background-color: $lightGrey !important;
       border-right: 1px solid $border;
 
-      &::after {
-        left: 0 !important;
+      &:focus {
+        border: none;
       }
+
+    //   &::after {
+    //     left: 0 !important;
+    //   }
     }
   }
 }
